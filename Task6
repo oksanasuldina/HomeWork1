@@ -1,0 +1,13 @@
+a = int(input('Введите параметр a: '))
+b = int(input('Введите параметр b: '))
+if a < b:
+    result = a
+    day = 1
+    print('{}-й день: {}'.format(day, a))
+    while result < b:
+        result = result + result*0.1  # считаем результат, увеличиваем на 10%
+        day += 1
+        print('{}-й день: {}'.format(day, round(result, 2)))
+    print('На {}-й день спортсмен достиг результата - не менее {} км '.format(day, b))
+else:
+    print('a должно быть меньше b, результат спортсмена должен становиться лучше')
