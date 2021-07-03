@@ -7,9 +7,12 @@ lengthStr = len(digit)
 i = 1
 while i < lengthStr:  # пока индекс числа строки меньше длины
     # (именно меньше так как максимальный индекс на 1 меньше длины строки)
-    if int(digit[i]) > maxNumber:  # если анализируемое число больше, то запоминаем
+     if int(digit[i]) > maxNumber:  # если анализируемое число больше, то запоминаем
         maxNumber = int(digit[i])
-        i += 1
+        if maxNumber != 9:
+            i += 1
+        else:
+            break
     else:  # если нет, просто идем дальше
         i += 1
 print('Самая большая цифра в числе: {}'.format(maxNumber))
