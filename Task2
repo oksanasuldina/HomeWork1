@@ -7,4 +7,4 @@ if remains > 0:
 else:
     minutes = 0
     seconds = 0
-print('{}:{}:{}'.format(hours, minutes, seconds))
+print(f"{hours:02}:{minutes:02}:{seconds:02}")
